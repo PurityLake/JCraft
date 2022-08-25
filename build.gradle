@@ -1,5 +1,4 @@
 buildscript {
-    
 
     repositories {
         mavenCentral()
@@ -40,6 +39,7 @@ allprojects {
 project(":desktop") {
     apply plugin: "java-library"
 
+    sourceCompatibility = 1.17
 
     dependencies {
         implementation project(":core")
@@ -54,6 +54,7 @@ project(":desktop") {
 project(":core") {
     apply plugin: "java-library"
 
+    sourceCompatibility = 1.17
 
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"

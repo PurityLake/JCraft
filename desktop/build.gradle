@@ -8,6 +8,7 @@ project.ext.assetsDir = new File("../assets")
 import org.gradle.internal.os.OperatingSystem
 
 task run(dependsOn: classes, type: JavaExec) {
+    sourceCompatibility = 1.17
     main = project.mainClassName
     classpath = sourceSets.main.runtimeClasspath
     standardInput = System.in
